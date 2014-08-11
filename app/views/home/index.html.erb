@@ -6,8 +6,8 @@
 <%= link_to "About", about_path %>
 
 <%= link_to "New gif", new_gif_path %>
-
-<%= @gifs.to_a.each do |gif| %>
-  <img src="<%= gif.url %>">
-  <%= gif.description %>
+<ul>
+<%= @gifs.each do |gif| %>
+  <li><img src="<%= gif.url %>"><li>
+  <li><%= gif.description %></li>
 <% end %>

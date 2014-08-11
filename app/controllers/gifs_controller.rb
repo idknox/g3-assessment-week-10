@@ -1,4 +1,4 @@
-class GifsController < ActionController::Base
+class GifsController < ApplicationController
   def new
     @gif = Gif.new
   end
