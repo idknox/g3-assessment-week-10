@@ -27,4 +27,15 @@ feature "Gifs" do
     expect(page).to have_content "Test"
     expect(page).to have_content "gif created successfully"
   end
+
+  scenario "User cannot create gif without fields filled" do
+    visit "/"
+
+    click_on "New gif"
+    click_on "Create gif"
+
+    expect(page).to have_content "URL can't be blank"
+    expect(page).to have_content "Title can't be blank"
+
+  end
 end
